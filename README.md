@@ -1,6 +1,7 @@
 # .bash_
-## additional things to add to my .bash_profile
-in your ~/.bash_profile add:
+### additional things to add to my .bash_profile
+
+For each file in your ~/._bash/ add to your ~/.bash_profile:
 
 ```sh`
 # Get My Base Functions
