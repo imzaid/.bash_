@@ -1,0 +1,29 @@
+#enables color in the terminal bash shell
+export CLICOLOR=1
+#sets up the color scheme for list
+#export LSCOLORS=gxfxcxdxbxegedabagacad
+export PS1="\[\e[33m\](\h) - \[\e[31m\]\u@\h \[\e[32m\][\w] \[\e[33m\]\$:\[\e[0m\] "
+export TERM=xterm-256color
+
+# Basic Alias'
+alias ls='ls --color=auto'
+alias lsa='ls -a'
+alias ll='ls -hl'
+alias lla='ls -ahl'
+alias greprn="grep -rn"
+alias rebash='source ~/.bash_profile'
+
+#############################
+# screen helpers
+rs() { # reattach screen
+  screen -dR $1;
+}
+
+alias vimviewcleanup="rm $HOME/.vimviews/*"
+
+set -o vi
+
+# Get Git stuff
+if [ -f ~/.bash_profile.git ]; then
+	. ~/.bash_/profile.git
+fi

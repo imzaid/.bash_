@@ -1,0 +1,16 @@
+#############################
+# GIT
+alias gitlogone="git log --oneline"
+alias gitgraph="git log --oneline --graph"
+gitlkg() {
+  filelistrun=`git ls-files -o -d --exclude-standard`
+  filelist=$filelistrun
+  filelistcountrun=`echo $filelist | wc -w`
+  filelistcount=$filelistcountrun
+  if [ $filelistcount -gt 0 ] ; then
+    git add $filelist
+  fi
+  git commit -a -m "[LKG] `date +%Y.%m.%d\ %X`"
+}
+
+
